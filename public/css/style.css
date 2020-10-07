@@ -1,0 +1,52 @@
+body {
+    background-color: #333;
+    color: white;
+}
+
+label,
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.grid-master {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-user {
+    background-color: #aa0055;
+    background-image: url('../icons/royalty-crown-variant-outline.svg');
+}
+
+.bg-first-friend {
+    background-color: #ccc;
+    background-image: url('../icons/first.svg');
+}
+
+.bg-second-friend {
+    background-color: #ccc;
+    background-image: url('../icons/second.svg');
+}
+
+.bg-user,
+.bg-first-friend,
+.bg-second-friend {
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+
+.grid-friends {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
