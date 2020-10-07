@@ -48,7 +48,7 @@ class UserController extends Controller
         } 
 
         else {
-            Session::flash('message', 'Este e-mail não foi indicado');
+            Session::flash('message', 'Este e-mail não foi indicado, tente novamente com outro e-mail!');
             return back();
         }
   
