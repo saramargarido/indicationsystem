@@ -1,7 +1,19 @@
+<p align="center">
+
+  <a href="https://www.linkedin.com/in/saramargarido/">
+    <img alt="Made by Sara Margarido" src="https://img.shields.io/badge/Made%20by-Sara%20Margarido-%23cd505e">
+  </a>
+
+</p>
+
 # Indication System
 **Sistema básico de indicação**
 
 Webserver: PHP 8.x, SGBD: MySQL, phpmyadmin
+
+![](images/001.png)
+![](images/002.png)
+![](images/003.png)
 
 Clonar o repositório
 
