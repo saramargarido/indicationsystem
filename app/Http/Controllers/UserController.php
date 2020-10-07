@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -47,7 +48,8 @@ class UserController extends Controller
         } 
 
         else {
-            return ('não existe');
+            Session::flash('message', 'Este e-mail não foi indicado');
+            return back();
         }
   
         if($user->id > 2) {
@@ -57,11 +59,6 @@ class UserController extends Controller
         }
 
         $user->save();
-
-        // $masterUser = User::where('id', '=', 1);
-        // $masterUser->rating = $user->rating;
-        // $masterUser->save();
-
         
         return back();
     }
@@ -79,14 +76,7 @@ class UserController extends Controller
     {
         $users = User::all();
         $countUsers = count($users);
-        // dd($users);
-        // if (count($users) > 0){
 
-        //     dd($users);
-        // }
-        //     dd(count($users));
-        // }
-        // dump($users);
         return view('welcome', compact(
             'users',
             'countUsers'
