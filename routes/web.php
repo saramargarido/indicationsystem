@@ -20,4 +20,5 @@ use App\Http\Controllers\UserController;
 Route::post('/friends/insert', 'App\Http\Controllers\UserController@insert')->name('friend_insert');
 Route::post('/refer/insert', 'App\Http\Controllers\UserController@referInsert')->name('refer_insert');
 Route::get('/', 'App\Http\Controllers\UserController@show')->name('show');
+Route::get('/projects/indicationsystem', 'App\Http\Controllers\UserController@show')->name('show');
 Route::post('/users', 'App\Http\Controllers\UserController@restart')->name('restart');

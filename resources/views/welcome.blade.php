@@ -86,6 +86,7 @@
 
         
         @if($countUsers >= 1 && $countUsers <= 2)
+
         <div class="welcome-banner">
             <h1>{{$users[0]->name}} indicou dois amigos para ganhar pontos, se você é um deles, faça seu cadastro abaixo.</h1><br>
             <h3>O primeiro amigo que se cadastrar ganha 200 pontos, o segundo ganha 100 pontos.</h3>
@@ -126,8 +127,17 @@
                 @if (Session::has('message'))
                 <p class="error">{{ Session::get('message') }}</p>
                 @endif
+                <div class="box-btn">
                 <div class="btn">
-                <button type="submit">Enviar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+            <form method="POST" action="{{ route('restart') }}">
+                {{-- {{method_field('DELETE')}} --}}
+                @csrf
+                <div class="btn restart">
+                <button type="submit">Recomeçar</button>
+                </div>
                 </div>
             </form>
         @endif
@@ -172,21 +182,5 @@
             </form>
         @endif
 
-{{-- <h1>{{ $users[0]->name }}</h1> --}}
-{{-- <h1>{{ $countUsers }}</h1> --}}
-{{-- @switch($users)
-@case($user->id = 1)
-<p>{{$user->name}}</p>
-@break
-@case($user->email = $user->firstDefer)
-<p> tem o {{ $user->email . $user->firstDefer }}</p>
-@break
-@default
-
-@endswitch --}}
-
-{{-- @foreach ($users as $user)
-        {{$user}}
-    @endforeach --}}
     </body>
 </html>

@@ -58,7 +58,6 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
 }
 
 button {
@@ -119,6 +118,27 @@ button:hover {
     height: 100px;
     margin: 0 auto;
     border-radius: 50%;
+}
+
+.box-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-btn > .btn {
+    margin-left: 10px;
+}
+
+.btn.restart button {
+    background-color: #ccc;
+    color: #666;
+}
+
+.btn.restart button:hover {
+    background-color: #aa0055;
+    color: #f7ff07;
 }
 
 .score {
