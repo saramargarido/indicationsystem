@@ -9,7 +9,7 @@
 # Indication System
 **Sistema básico de indicação**
 
-http://sara.dev.br/projects/indicationsystem/public/
+http://sara.dev.br/projects/indicationsystem/
 
 Webserver: PHP 8.x, SGBD: MySQL, phpmyadmin
 
